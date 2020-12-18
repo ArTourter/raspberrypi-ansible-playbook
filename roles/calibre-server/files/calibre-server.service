@@ -1,0 +1,13 @@
+[Unit]
+Description=Calibre Content Server
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/default/calibre-server
+Type=simple
+User=calibre
+Group=calibre
+ExecStart=/bin/sh -c '/usr/bin/calibre-server --port ${CALIBRE_PORT} --userdb /srv/calibre/users.sqlite --enable-auth --log /var/log/calibre/server.log --access-log /var/log/calibre/access.log ${CALIBRE_LIBRARY_PATHS}'
+ 
+[Install]
+WantedBy=default.target

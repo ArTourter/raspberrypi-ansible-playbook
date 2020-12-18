@@ -1,0 +1,42 @@
+---
+- name: "install calibre"
+  apt:
+    pkg:
+      - calibre
+    state: latest
+    update_cache: true
+
+- name: "Create calibre group"
+  group:
+    name: calibre
+    gid: 1001
+    state: present
+
+- name: "Create calibre user"
+  user:
+    name: calibre
+    comment: Calibre User
+    shell: /bin/bash
+    uid: 1001
+    group: calibre
+    password: "$6$Jcao7/vZNWYf3MMu$wyx781IozPZSiicERwuHDQ0nJchTihlLg9uaiV7U7qcTziTCanCFbMWdV4ogM7O.yUUEawGKtfWJpN2JAbDgA0"
+    update_password: always
+
+- name: Create calibre folders
+  file:
+    path: {{ item }}
+    state: directory
+    mode: '0755'
+    owner: calibre
+    group: calibre
+  with_items:
+    - "/srv/calibre"
+    - "/var/log/calibre"
+
+- name: Configuration files
+  file:
+    src: '{{ item.src }}'
+    dest: '{{ item.dest }}'
+  loop:
+    - { src: calibre-server.service, dest: /etc/systemd/system/ }
+    - { src: calibre-server, dest: /etc/default/ }
