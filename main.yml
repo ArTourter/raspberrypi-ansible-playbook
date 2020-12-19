@@ -1,0 +1,20 @@
+---
+
+- hosts: all
+
+  tasks:
+    - name: install packages
+      apt:
+        pkg:
+          - screen
+          - neofetch
+          - inxi
+        state: latest
+        update_cache: true
+  
+  roles:
+    - install_vim
+
+- hosts: calibre
+  roles:
+    - calibre-server
