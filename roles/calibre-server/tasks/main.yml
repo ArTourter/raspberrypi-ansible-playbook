@@ -1,4 +1,5 @@
 ---
+
 - name: "install calibre"
   apt:
     pkg:
@@ -24,7 +25,7 @@
 
 - name: Create calibre folders
   file:
-    path: {{ item }}
+    path: '{{ item }}'
     state: directory
     mode: '0755'
     owner: calibre
@@ -34,7 +35,7 @@
     - "/var/log/calibre"
 
 - name: Configuration files
-  file:
+  copy:
     src: '{{ item.src }}'
     dest: '{{ item.dest }}'
   loop:
