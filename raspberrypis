@@ -1,3 +1,10 @@
+[all]
 clafoutis
 kougelhopf
 bakewell
+
+[pihole]
+clafoutis
+
+[calibre]
+clafoutis
