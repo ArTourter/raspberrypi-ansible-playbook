@@ -1,0 +1,12 @@
+---
+
+- name: install unattended_upgrades
+  apt:
+    name: unattended-upgrades
+    state: latest
+    update_cache: true
+
+- name: fix for raspbian
+  copy:
+    src: "51unattended-upgrades-raspbian"
+    dest: "/etc/apt/apt.conf.d"
