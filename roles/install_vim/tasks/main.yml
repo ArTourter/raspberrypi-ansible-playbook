@@ -4,7 +4,6 @@
   apt:
     name: vim
     state: present
-    update_cache: yes
 
 - name: make vim default editor
   alternatives:

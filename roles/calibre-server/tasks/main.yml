@@ -4,8 +4,7 @@
   apt:
     pkg:
       - calibre
-    state: latest
-    update_cache: true
+    state: present
 
 - name: "Create calibre group"
   group:
