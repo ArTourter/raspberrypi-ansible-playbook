@@ -1,0 +1,27 @@
+---
+
+- name: install sane-utils
+  apt:
+    name: sane-utils
+    state: present
+
+- name: Add local subnet to saned hosts
+  lineinfile:
+    path: /etc/sane.d/net.conf
+    line: 192.168.72.1/24
+    create: yes
+
+- name: UDEV rule for correct scanner device permission
+  copy:
+    src: 10-scanner.rules
+    dest: /etc/udev/rules.d/
+    owner: root
+    group: root
+    mode: 0644
+
+- name: enable and start saned
+  systemd:
+    name: saned.socket
+    state: started
+    enabled: yes
+
