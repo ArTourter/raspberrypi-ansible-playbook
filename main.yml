@@ -6,6 +6,7 @@
     - name: install packages
       apt:
         pkg:
+          - i2c-tools
           - screen
           - lshw
           - alpine
