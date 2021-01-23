@@ -40,3 +40,14 @@
   loop:
     - { src: calibre-server.service, dest: /etc/systemd/system/ }
     - { src: calibre-server, dest: /etc/default/ }
+
+- name: enable systemd calibre service
+  systemd: 
+    name: calibre-server
+    daemon_reload: yes
+    enabled: yes
+
+- name: start systemd calibre service
+  systemd: 
+    name: calibre-server
+    state: started
