@@ -1,6 +1,3 @@
-bakewell
-battenberg
-
 [pihole]
 clafoutis
 
@@ -8,4 +5,14 @@ clafoutis
 clafoutis
 
 [scanner]
+kougelhopf
+
+[pi0w]
+bakewell
+battenberg
+
+[pi3]
+clafoutis
+
+[pi4]
 kougelhopf
