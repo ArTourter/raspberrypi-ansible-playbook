@@ -1,0 +1,74 @@
+---
+
+all:
+  hosts:
+    clafoutis:
+      description: PiHole server
+      memory: 2GB
+      MAC: e4:5f:01:b3:32:a7
+
+    croutade:
+      description: Homeassistant server
+      memory: 4GB
+      MAC: dc:a6:32:a2:11:1a
+
+    kougelhopf:
+      description: Scanner/3D print server
+      memory: 4GB
+      MAC: e4:5f:01:60:8c:76
+
+    bakewell:
+      description: PiRadio
+      memory: 512MB
+      MAC: b8:27:eb:8d:51:fc
+
+    battenberg:
+      description:
+      memory:
+      MAC:
+
+    madeleine:
+      description: GameBoy
+      memory: 2GB
+      MAC:
+
+    madeira:
+      description:
+      memory: 8GB
+      MAC:
+    
+    farbreton:
+      description: Secondary PiHole
+      memory: 4GB
+      MAC:
+
+pihole:
+  hosts:
+    clafoutis:
+
+calibre:
+  hosts:
+    clafoutis:
+
+scanner:
+  hosts:
+    kougelhopf:
+
+pi0w:
+  hosts:
+    bakewell:
+    battenberg:
+
+pi4:
+  hosts:
+    kougelhopf:
+    clafoutis:
+    madeleine:
+    croustade:
+    madeira:
+
+poe:
+  hosts:
+    clafoutis:
+    kougelhopf:
+    madeira:

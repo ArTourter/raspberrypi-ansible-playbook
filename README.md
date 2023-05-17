@@ -2,20 +2,22 @@
 
 ## naming scheme: cakes
 
-- clafoutis
-- kouglehopf
-- bakewell
-- battenberg
-- croustade
-- madeleine
+- ~~clafoutis~~
+- ~~kouglehopf~~
+- ~~bakewell~~
+- ~~battenberg~~
+- ~~croustade~~
+- ~~madeleine~~
 - brownie
 - flapjack
 - cupcake
-- farbreton
-- madeira
+- muffin
+- ~~farbreton~~
+- ~~madeira~~
 - simnel
 - tiramisu
 - millefeuille
 - panettone
 - cheesecake
 - pandoro
+- quatrequart
