@@ -35,12 +35,12 @@ all:
     madeira:
       description:
       memory: 8GB
-      MAC:
+      MAC: d8:3a:dd:18:18:1a
     
     farbreton:
       description: Secondary PiHole
       memory: 4GB
-      MAC: d8:3a:dd:18:18:1a
+      MAC: d8:3a:dd:12:da:6c 
 
 pihole:
   hosts:
